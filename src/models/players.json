@@ -1,0 +1,15 @@
+[
+    { "id": 1,    "name": "Steve G",    "skill": 7,   "position":"Midfield" },
+    { "id": 2,    "name": "Tony",       "skill": 9,   "position":"Striker" },
+    { "id": 3,    "name": "Chris H",    "skill": 8,   "position":"Striker" },   
+    { "id": 4,    "name": "Chris S",    "skill": 7,   "position":"Midfield" },
+    { "id": 5,    "name": "Geoff",      "skill": 6,   "position":"Defence" },
+    { "id": 6,    "name": "Neil",       "skill": 7,   "position":"Midfield" },
+    { "id": 7,    "name": "John P",     "skill": 8,   "position":"Goals" },
+    { "id": 8,    "name": "Mark",       "skill": 7,   "position":"Midfield" },
+    { "id": 9,    "name": "Sam",        "skill": 10,  "position":"Midfield" },
+    { "id": 10,   "name": "Dave",       "skill": 9,   "position":"Striker" },
+    { "id": 11,   "name": "Pete",       "skill": 6,   "position":"Defence" },
+    { "id": 12,   "name": "Boz",        "skill": 6,   "position":"Defence" }
+]
+
