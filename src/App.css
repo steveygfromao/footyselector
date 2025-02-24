@@ -12,12 +12,13 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 2.4em;
   line-height: 1.1;
   color: rgb(255, 242, 0);
 }
 
 h2 {
+  font-size: 1.1em;
   color: rgb(70, 248, 70);
 }
 
@@ -25,19 +26,16 @@ h2 {
   background-color: #04AA6D; /* Green */
   border: none;
   color: white;
-  padding: 15px 22px;
+  padding: 8px 14px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 20px;
-  position:absolute;
-  top: 66%; /* Moves button to the middle vertically */
-  left: 14%; /* Moves button to the middle horizontally */
+  font-size: 14px;
   
 }
 
 table {
-  width: 60%;
+  width: 100%;
 }
 td {
   text-align: center;
