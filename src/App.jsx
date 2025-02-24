@@ -1,6 +1,7 @@
 
 import './App.css'
 import { useState, useEffect } from 'react'
+import Footer from './components/Footer'
 import PlayerDisplayTable from './components/PlayerDisplayTable'
 import playersList  from './models/players'
 
@@ -31,7 +32,7 @@ const App = () => {
 
   return (
     <>
-      <h1>Football Team Selector</h1>
+      <h1>Team Selector</h1>
       <div>
           <h2>Team 1</h2>
           <PlayerDisplayTable players={playerTeamOne} />
@@ -41,6 +42,7 @@ const App = () => {
       <div>
         <button class="button" onClick={recreateTeams}>Re-create</button>
       </div>
+      <Footer />
     </>
   );
 }
