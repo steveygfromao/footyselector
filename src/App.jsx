@@ -39,9 +39,7 @@ const App = () => {
           <h2>Team 2</h2>
           <PlayerDisplayTable players={playerTeamTwo} />
       </div>
-      <div>
-        <button class="button" onClick={recreateTeams}>Re-create</button>
-      </div>
+      <button class="button" onClick={recreateTeams}>Re-create</button>
       <Footer />
     </>
   );
