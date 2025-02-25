@@ -4,7 +4,8 @@ import Player from './Player'
 const PlayerDisplayTable = ({players}) => {
 
     const totalSkillsLevel = () => {
-        return players.reduce((sum, item) => sum + item.skill, 0);
+        let level = players.reduce((sum, item) => sum + item.skill, 0);
+        return Math.round(level * 100) / 100;
     }
 
     return (
@@ -25,7 +26,7 @@ const PlayerDisplayTable = ({players}) => {
                 ))}
             </tbody>
         </table>
-        <h3>Skill Level Total:{totalSkillsLevel()}</h3>
+        <h4>Skill Level Total:{totalSkillsLevel()}</h4>
     </>
   )
 }
