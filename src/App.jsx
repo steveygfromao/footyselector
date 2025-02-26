@@ -7,7 +7,7 @@ import playersList  from './models/players'
 
 const App = () => {
 
-  const SKILL_THRESHOLD = 3;
+  const SKILL_THRESHOLD = 1.5;
   const PlayerAmount = playersList.length;
   const [playerTeamOne, setTeamOnePlayers] = useState([]);
   const [playerTeamTwo, setTeamTwoPlayers] = useState([]);
@@ -17,7 +17,7 @@ const App = () => {
     recreateTeams();
   }, []);
   
-  const createTeams = (players) => {
+  const createTeams = async (players) => {
     for (let i = players.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [players[i], players[j]] = [players[j], players[i]];
@@ -27,28 +27,37 @@ const App = () => {
     let team2 = players.slice(PlayerAmount/2, PlayerAmount);
   
     // If skills difference is greater than skills threshold, we will roll for teams again
-    if(skillsDifference(team1, team2) > SKILL_THRESHOLD) {
-      recreateTeams();
-    } else {
-      setTeamOnePlayers(team1);
-      setTeamTwoPlayers(team2);
-    }
+    calculateSkillsDifference(team1, team2)
+    .then((result) => {
+      if(result > SKILL_THRESHOLD) {
+        recreateTeams();
+      }
+      else {
+        setSkillsDiff(result);
+        setTeamOnePlayers(team1);
+        setTeamTwoPlayers(team2);
+      }
+    })
+    .catch((error)=> {
+      console.error('Error:',error);
+    })
   }
 
-  const skillsDifference = (teamOne, teamTwo) => {
+  const calculateSkillsDifference = async (teamOne, teamTwo) => {
+    const result = await skillsDifference(teamOne, teamTwo);
+    return result;
+  }
 
-    let teamOneLevel = teamOne.reduce((sum, item) => sum + item.skill, 0);
-    teamOneLevel = Math.round(teamOneLevel * 100) / 100;
-
-    let teamTwoLevel = teamTwo.reduce((sum, item) => sum + item.skill, 0);
-    teamTwoLevel = Math.round(teamTwoLevel * 100) / 100;
-
-    let skillDiff = teamOneLevel > teamTwoLevel ? teamOneLevel - teamTwoLevel : teamTwoLevel - teamOneLevel;
-    skillDiff = Math.round(skillDiff * 100) / 100;
-    
-    setSkillsDiff(skillDiff);
-    
-    return skillDiff;
+  const skillsDifference = async (teamOne, teamTwo) => {
+    return new Promise((resolve) => {
+      let teamOneLevel = teamOne.reduce((sum, item) => sum + item.skill, 0);
+      teamOneLevel = Math.round(teamOneLevel * 100) / 100;
+      let teamTwoLevel = teamTwo.reduce((sum, item) => sum + item.skill, 0);
+      teamTwoLevel = Math.round(teamTwoLevel * 100) / 100;
+      let skillDiff = teamOneLevel > teamTwoLevel ? teamOneLevel - teamTwoLevel : teamTwoLevel - teamOneLevel;
+      skillDiff = Math.round(skillDiff * 100) / 100;
+      resolve(skillDiff);
+    });
   }
 
   const recreateTeams = () => {
