@@ -66,7 +66,7 @@ const App = () => {
 
   return (
     <>
-      <h1>Team Selector</h1>
+      <h2>Team Selector</h2>
       <div>
        
           <PlayerDisplayTable players={playerTeamOne} />
@@ -75,7 +75,7 @@ const App = () => {
       </div>
       <h5>Skills difference:{skillsDiff}</h5>
       <button className="button" onClick={recreateTeams}>Re-create</button>
-      <Footer />
+     {/* <Footer /> */}
     </>
   );
 }
