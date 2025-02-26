@@ -40,8 +40,10 @@ table {
 td {
   text-align: center;
   border-bottom: 1px solid #ddd;
+  font-size: 14px;
 }
 th {
+  font-size: 15px;
   text-align: left;
   border-bottom: 1px solid #ddd;
   background-color: cadetblue;
