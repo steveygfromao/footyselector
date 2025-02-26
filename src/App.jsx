@@ -7,7 +7,7 @@ import playersList  from './models/players'
 
 const App = () => {
 
-  const SKILL_THRESHOLD = 1.5;
+  const SKILL_THRESHOLD = 0.7;
   const PlayerAmount = playersList.length;
   const [playerTeamOne, setTeamOnePlayers] = useState([]);
   const [playerTeamTwo, setTeamTwoPlayers] = useState([]);
@@ -68,12 +68,12 @@ const App = () => {
     <>
       <h1>Team Selector</h1>
       <div>
-          <h2>Team 1</h2>
+       
           <PlayerDisplayTable players={playerTeamOne} />
-          <h2>Team 2</h2>
+         
           <PlayerDisplayTable players={playerTeamTwo} />
       </div>
-      <h4>Skills difference:{skillsDiff}</h4>
+      <h5>Skills difference:{skillsDiff}</h5>
       <button className="button" onClick={recreateTeams}>Re-create</button>
       <Footer />
     </>
