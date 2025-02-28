@@ -3,7 +3,7 @@
     { "id": 2,    "name": "Tony",       "skill": 7.7,   "position":"Striker" },
     { "id": 9,    "name": "Sam",        "skill": 8.0,   "position":"Midfield" },
     { "id": 10,   "name": "Dave",       "skill": 8.8,   "position":"Striker" },
-    { "id": 4,    "name": "Chris S",    "skill": 6.4,   "position":"Defence" },
+    { "id": 4,    "name": "Chris S",    "skill": 6.4,   "position":"Midfield" },
     { "id": 6,    "name": "Neil",       "skill": 7.3,   "position":"Striker" },
     { "id": 12,   "name": "Greg",       "skill": 6.0,   "position":"Defence" },
     { "id": 8,    "name": "Mark",       "skill": 6.0,   "position":"Striker" },
