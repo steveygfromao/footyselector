@@ -7,11 +7,13 @@ import playersList  from './models/players'
 
 const App = () => {
 
-  const SKILL_THRESHOLD = 0.7;
+  const SKILL_THRESHOLD = 0.4;
   const PlayerAmount = playersList.length;
   const [playerTeamOne, setTeamOnePlayers] = useState([]);
   const [playerTeamTwo, setTeamTwoPlayers] = useState([]);
   const [skillsDiff, setSkillsDiff] = useState(0);
+  let totalStrikers = 0;
+  let totalDefenders = 0;
 
   useEffect(() => {
     recreateTeams();
@@ -23,13 +25,18 @@ const App = () => {
         [players[i], players[j]] = [players[j], players[i]];
     }
    
+    totalStrikers = playersList.filter(player => player.position === 'Striker');
+    totalStrikers = Math.ceil(totalStrikers.length / 2);
+    totalDefenders = playersList.filter(player => player.position === 'Defence');
+    totalDefenders = Math.ceil(totalDefenders.length / 2);
+
     let team1 = players.slice(0, PlayerAmount/2);
     let team2 = players.slice(PlayerAmount/2, PlayerAmount);
   
     // If skills difference is greater than skills threshold, we will roll for teams again
     calculateSkillsDifference(team1, team2)
     .then((result) => {
-      if(result > SKILL_THRESHOLD) {
+      if(result > SKILL_THRESHOLD || checkPlayerPosition(team1,"Defence", totalDefenders) || checkPlayerPosition(team2, "Defence", totalDefenders) || checkPlayerPosition(team1,"Striker", totalStrikers) || checkPlayerPosition(team2,"Striker", totalStrikers)) {
         recreateTeams();
       }
       else {
@@ -58,6 +65,12 @@ const App = () => {
       skillDiff = Math.round(skillDiff * 100) / 100;
       resolve(skillDiff);
     });
+  }
+
+  const checkPlayerPosition = (team, position, max) =>{
+    const positions = team.filter(player => player.position === position);
+    console.log("Amount of " + position + "=" + positions.length)
+    return positions.length > max;
   }
 
   const recreateTeams = () => {
