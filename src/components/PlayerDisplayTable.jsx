@@ -1,12 +1,13 @@
 import React, {useState} from 'react'
 import Player from './Player'
+import PlayerCard from './PlayerCard';
 
 const PlayerDisplayTable = ({players}) => {
 
     const [selectedPlayer, setSelectedPlayer] = useState(null);
 
     const handleRowClick = (player) => {
-   //     setSelectedPlayer(player);
+        setSelectedPlayer(player);
     };
 
     const totalSkillsLevel = () => {
@@ -30,16 +31,19 @@ const PlayerDisplayTable = ({players}) => {
                     <Player playerObj={player}/>
                     </tr>
                 ))}
+               
             </tbody>
         </table>
         <h5>Skill Level Total:{totalSkillsLevel()}</h5>
-        {selectedPlayer && (
+        <PlayerCard player={selectedPlayer} />
+       
+      {/*  {selectedPlayer && (
                    <div>
                        <h2>Selected Player Details</h2>
                        <p>Name: {selectedPlayer.name}</p>
                        <p>Skill: {selectedPlayer.skill}</p>
                    </div>
-               )}
+               )}*/}
     </>
   )
 }
