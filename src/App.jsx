@@ -69,7 +69,6 @@ const App = () => {
 
   const checkPlayerPosition = (team, position, max) =>{
     const positions = team.filter(player => player.position === position);
-    console.log("Amount of " + position + "=" + positions.length)
     return positions.length > max;
   }
 
