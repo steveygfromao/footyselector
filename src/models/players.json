@@ -1,13 +1,15 @@
 [
     { "id": 1,    "name": "Steve G",    "skill": 6.0,   "position":"Midfield" },
-    { "id": 2,    "name": "Tony",       "skill": 7.7,   "position":"Striker" },
     { "id": 9,    "name": "Sam",        "skill": 8.0,   "position":"Midfield" },
-    { "id": 10,   "name": "Dave",       "skill": 8.8,   "position":"Striker" },
     { "id": 4,    "name": "Chris S",    "skill": 6.4,   "position":"Midfield" },
-    { "id": 6,    "name": "Neil",       "skill": 7.3,   "position":"Striker" },
+    { "id": 6,    "name": "Neil",       "skill": 7.3,   "position":"Midfield" },
     { "id": 12,   "name": "Greg",       "skill": 6.0,   "position":"Defence" },
-    { "id": 8,    "name": "Mark",       "skill": 6.0,   "position":"Striker" },
-    { "id": 5,    "name": "Geoff",      "skill": 5.8,   "position":"Defence" },
-    { "id": 11,   "name": "Pete",       "skill": 5.0,   "position":"Defence" }
+    { "id": 8,    "name": "Mark",       "skill": 6.0,   "position":"Midfield" },
+    { "id": 5,    "name": "Geoff",      "skill": 5.5,   "position":"Defence" },
+    { "id": 11,   "name": "Pete",       "skill": 5.0,   "position":"Defence" },
+    { "id": 13,   "name": "Oliver",     "skill": 6.0,   "position":"Striker" },
+    { "id": 14,   "name": "Steve H",    "skill": 6.5,   "position":"Midfield" }
+
+
 ]
 
