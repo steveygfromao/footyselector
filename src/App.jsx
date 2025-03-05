@@ -36,14 +36,18 @@ const App = () => {
     // If skills difference is greater than skills threshold, we will roll for teams again
     calculateSkillsDifference(team1, team2)
     .then((result) => {
-      if(result > SKILL_THRESHOLD || checkPlayerPosition(team1,"Defence", totalDefenders) || checkPlayerPosition(team2, "Defence", totalDefenders) || checkPlayerPosition(team1,"Striker", totalStrikers) || checkPlayerPosition(team2,"Striker", totalStrikers)) {
+      if(!CheckPlayersOnSameTeam(team1,team2, "Mark", "Oliver"))
         recreateTeams();
-      }
-      else {
-        setSkillsDiff(result);
-        setTeamOnePlayers(team1);
-        setTeamTwoPlayers(team2);
-      }
+      else  {
+        if(result > SKILL_THRESHOLD || checkPlayerPosition(team1,"Defence", totalDefenders) || checkPlayerPosition(team2, "Defence", totalDefenders) || checkPlayerPosition(team1,"Striker", totalStrikers) || checkPlayerPosition(team2,"Striker", totalStrikers)) {
+          recreateTeams();
+        }
+        else {
+          setSkillsDiff(result);
+          setTeamOnePlayers(team1);
+          setTeamTwoPlayers(team2);
+        }
+        }
     })
     .catch((error)=> {
       console.error('Error:',error);
@@ -71,6 +75,16 @@ const App = () => {
     const positions = team.filter(player => player.position === position);
     return positions.length > max;
   }
+
+  const CheckPlayersOnSameTeam = (team1, team2, playerName1, playerName2 ) => {
+    // Check if both player names exist in the players list
+    let a = (team1.some( p=>p.name==playerName1) && team1.some(p=>p.name==playerName2) ) ||
+       (team2.some( p=>p.name==playerName1) && team2.some(p=>p.name==playerName2) ) ;
+
+       console.log("Exists:" + a);
+       return a;
+  }
+
 
   const recreateTeams = () => {
     createTeams([...playersList]);  
