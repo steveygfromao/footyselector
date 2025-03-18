@@ -4,7 +4,7 @@ const Player = ({playerObj}) => {
         <>
             <td>{playerObj.name}</td>
             <td>{playerObj.position}</td>
-            <td>{playerObj.skill}</td>
+         {/*   <td>{playerObj.skill}</td> */}
         </>
     );
 }
