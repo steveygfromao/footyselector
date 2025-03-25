@@ -7,7 +7,7 @@ import playersList  from './models/players'
 
 const App = () => {
 
-  const SKILL_THRESHOLD = 1;
+  const SKILL_THRESHOLD = 0.6;
   const PlayerAmount = playersList.length;
   const [playerTeamOne, setTeamOnePlayers] = useState([]);
   const [playerTeamTwo, setTeamTwoPlayers] = useState([]);
