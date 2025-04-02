@@ -1,15 +1,15 @@
 [
-    { "id": 1,   "name": "Steve G",    "skill": 7.5,   "position":"Midfield","image":"/assets/face1.jpg" },
-    { "id": 2,   "name": "Sam",        "skill": 9.1,   "position":"Striker","image":"/assets/face3.jpg" },
-    { "id": 3,   "name": "Boz",        "skill": 4.8, "position":"Defence","image":"/assets/face2.webp" },
-    { "id": 4,   "name": "Greg",       "skill": 5.8,   "position":"Defence","image":"/assets/face4.jpg" },
-    { "id": 5,   "name": "Dave"   ,    "skill": 9.1, "position":"Striker","image":"/assets/face5.jpg" },
-    { "id": 6,   "name": "Tony",       "skill": 8.9,   "position":"Striker","image":"/assets/face6.jpg" },
-    { "id": 7,   "name": "Mark",      "skill": 7.5,   "position":"Midfield","image":"/assets/face7.jpg" },
-    { "id": 8,   "name": "Chris S",    "skill": 7.8, "position":"Midfield","image":"/assets/face8.jpg" },
-    { "id": 9,   "name": "Pete",       "skill": 4.95, "position":"Defence","image":"/assets/face9.jpg" },
-    { "id": 10,  "name": "Chris H",    "skill": 8.0, "position":"Midfield","image":"/assets/face10.jpg" },
-    { "id": 11,  "name": "Neil",        "skill": 9.0, "position":"Striker","image":"/assets/face11.jpg" },
-    { "id": 12,  "name": "Geoff",        "skill": 5.3, "position":"Midfield","image":"/assets/face12.jpg" }
+    { "id": 1,   "name": "Steve G",    "skill": 7.5,   "position":"Midfield","image":"/face1.jpg" },
+    { "id": 2,   "name": "Sam",        "skill": 9.1,   "position":"Striker","image":"/face3.jpg" },
+    { "id": 3,   "name": "Boz",        "skill": 4.8, "position":"Defence","image":"/face2.webp" },
+    { "id": 4,   "name": "Greg",       "skill": 5.8,   "position":"Defence","image":"/face4.jpg" },
+    { "id": 5,   "name": "Dave"   ,    "skill": 9.1, "position":"Striker","image":"/face5.jpg" },
+    { "id": 6,   "name": "Tony",       "skill": 8.9,   "position":"Striker","image":"/face6.jpg" },
+    { "id": 7,   "name": "Mark",      "skill": 7.5,   "position":"Midfield","image":"/face7.jpg" },
+    { "id": 8,   "name": "Chris S",    "skill": 7.8, "position":"Midfield","image":"/face8.jpg" },
+    { "id": 9,   "name": "Pete",       "skill": 4.95, "position":"Defence","image":"/face9.jpg" },
+    { "id": 10,  "name": "Chris H",    "skill": 8.0, "position":"Midfield","image":"/face10.jpg" },
+    { "id": 11,  "name": "Neil",        "skill": 9.0, "position":"Striker","image":"/face11.jpg" },
+    { "id": 12,  "name": "Geoff",        "skill": 5.3, "position":"Midfield","image":"/face12.jpg" }
 ]
 
