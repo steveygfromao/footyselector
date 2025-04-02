@@ -22,6 +22,7 @@ const PlayerDisplayTable = ({players}) => {
                 <tr>
                     <th>Name</th>
                     <th>Position</th>
+                    <th>Face</th>
                 {/*    <th>Fitness</th> */ }
                 </tr>
             </thead>
