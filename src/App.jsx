@@ -39,8 +39,14 @@ const App = () => {
       if(CheckPlayersOnSameTeam(team1,team2, "Aaron", "Sam"))
         recreateTeams();
       else  {
-        if(result > SKILL_THRESHOLD || checkPlayerPosition(team1,"Defence", totalDefenders) || checkPlayerPosition(team2, "Defence", totalDefenders) || checkPlayerPosition(team1,"Striker", totalStrikers) || checkPlayerPosition(team2,"Striker", totalStrikers)) {
+        if(CheckPlayersOnSameTeam(team1,team2, "Neil", "Geoff"))
           recreateTeams();
+        else
+          if(!CheckPlayersOnSameTeam(team1,team2, "Mark","Oliver"))
+            recreateTeams();
+          else
+            if(result > SKILL_THRESHOLD || checkPlayerPosition(team1,"Defence", totalDefenders) || checkPlayerPosition(team2, "Defence", totalDefenders) || checkPlayerPosition(team1,"Striker", totalStrikers) || checkPlayerPosition(team2,"Striker", totalStrikers)) {
+              recreateTeams();
         }
         else {
           setSkillsDiff(result);
