@@ -1,4 +1,3 @@
-
 import './App.css'
 import { useState, useEffect } from 'react'
 import Footer from './components/Footer'
@@ -20,7 +19,7 @@ const App = () => {
   }, []);
   
   const createTeams = async (players) => {
-    for (let i = players.length - 1; i > 0; i--) {
+    for (let i = players.length - 1; i >= 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [players[i], players[j]] = [players[j], players[i]];
     }
@@ -39,12 +38,12 @@ const App = () => {
       if(CheckPlayersOnSameTeam(team1,team2, "Aaron", "Oliver"))
         recreateTeams();
       else  {
-        if(CheckPlayersOnSameTeam(team1,team2, "Neil", "Geoff"))
-          recreateTeams();
-        else
-          if(!CheckPlayersOnSameTeam(team1,team2, "Mark","Oliver"))
-            recreateTeams();
-          else
+     //   if(CheckPlayersOnSameTeam(team1,team2, "Neil", "Geoff"))
+       //   recreateTeams();
+        //else
+       //   if(!CheckPlayersOnSameTeam(team1,team2, "Mark","Oliver"))
+         //   recreateTeams();
+          //else
             if(result > SKILL_THRESHOLD || checkPlayerPosition(team1,"Defence", totalDefenders) || checkPlayerPosition(team2, "Defence", totalDefenders) || checkPlayerPosition(team1,"Striker", totalStrikers) || checkPlayerPosition(team2,"Striker", totalStrikers)) {
               recreateTeams();
         }
@@ -87,9 +86,7 @@ const App = () => {
     // Check if both player names exist in the players list
     let a = (team1.some( p=>p.name==playerName1) && team1.some(p=>p.name==playerName2) ) ||
        (team2.some( p=>p.name==playerName1) && team2.some(p=>p.name==playerName2) ) ;
-
-       console.log("Exists:" + a);
-       return a;
+    return a;
   }
 
 
