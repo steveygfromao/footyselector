@@ -1,15 +1,13 @@
 [
     { "id": 1,   "name": "Stevey G",    "skill": 7.5,   "position":"Midfield","image":"https://api.dicebear.com/9.x/notionists/svg?seed=Felix" },
-    { "id": 2,   "name": "Aaron",        "skill": 9.5,   "position":"Striker","image":"https://api.dicebear.com/9.x/notionists/svg?seed=Aneka" },
-    { "id": 3,   "name": "Boz",        "skill": 5.8, "position":"Midfield","image":"https://api.dicebear.com/9.x/big-ears/svg?seed=Felix" },
-    { "id": 4,   "name": "Greg",       "skill": 5.8,   "position":"Defence","image":"https://api.dicebear.com/9.x/adventurer-neutral/svg?radius=50" },
-    { "id": 5,   "name": "Dave"   ,    "skill": 9.0, "position":"Striker","image":"https://api.dicebear.com/9.x/big-smile/svg?flip=false" },
-    { "id": 6,   "name": "Tony",       "skill": 9.1,   "position":"Striker","image":"https://api.dicebear.com/9.x/bottts/svg" },
-    { "id": 7,   "name": "Mark",      "skill": 7.0,   "position":"Midfield","image":"https://api.dicebear.com/9.x/bottts/svg?seed=Aneka" },
-    { "id": 8,   "name": "Oliver",    "skill": 9.5, "position":"Striker","image":"https://api.dicebear.com/9.x/miniavs/svg" },
-    { "id": 9,   "name": "Mike",      "skill": 5.2, "position":"Defence","image":"https://api.dicebear.com/9.x/micah/svg?seed=Felix" },
-    { "id": 10,  "name": "Steve",    "skill": 8.0, "position":"Midfield","image":"https://api.dicebear.com/9.x/notionists/svg" },
-    { "id": 11,  "name": "Chris S",   "skill": 7.6, "position":"Midfield","image":"https://api.dicebear.com/9.x/croodles/svg" },
-    { "id": 12,  "name": "Geoff",     "skill": 5.0, "position":"Midfield","image":"https://api.dicebear.com/9.x/big-ears/svg" }
+    { "id": 2,   "name": "Boz",        "skill": 5.8, "position":"Midfield","image":"https://api.dicebear.com/9.x/big-ears/svg?seed=Felix" },
+    { "id": 3,   "name": "Greg",       "skill": 5.8,   "position":"Defence","image":"https://api.dicebear.com/9.x/adventurer-neutral/svg?radius=50" },
+    { "id": 4,   "name": "Dave"   ,    "skill": 9.0, "position":"Striker","image":"https://api.dicebear.com/9.x/big-smile/svg?flip=false" },
+    { "id": 5,   "name": "Neil",       "skill": 8.3,   "position":"Striker","image":"https://api.dicebear.com/9.x/bottts/svg" },
+    { "id": 6,   "name": "John",      "skill": 8.0,   "position":"Midfield","image":"https://api.dicebear.com/9.x/bottts/svg?seed=Aneka" },
+    { "id": 7,   "name": "Mike",      "skill": 5.2, "position":"Defence","image":"https://api.dicebear.com/9.x/micah/svg?seed=Felix" },
+    { "id": 8,  "name": "Steve",    "skill": 8.0, "position":"Midfield","image":"https://api.dicebear.com/9.x/notionists/svg" },
+    { "id": 9,  "name": "Chris S",   "skill": 7.6, "position":"Midfield","image":"https://api.dicebear.com/9.x/croodles/svg" },
+    { "id": 10,  "name": "Geoff",     "skill": 5.0, "position":"Midfield","image":"https://api.dicebear.com/9.x/big-ears/svg" }
 ]
 
