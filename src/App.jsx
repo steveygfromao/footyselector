@@ -1,6 +1,5 @@
 import './App.css'
 import { useState, useEffect } from 'react'
-import Footer from './components/Footer'
 import PlayerDisplayTable from './components/PlayerDisplayTable'
 import playersList  from './models/players'
 
@@ -102,6 +101,7 @@ const App = () => {
           <PlayerDisplayTable players={playerTeamOne} />
          
           <PlayerDisplayTable players={playerTeamTwo} />
+      
       </div>
       <h5>Skills difference:{skillsDiff}</h5>
       <button className="button" onClick={recreateTeams}>Re-create</button>
