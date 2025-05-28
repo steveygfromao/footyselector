@@ -5,7 +5,7 @@ import playersList  from './models/players'
 
 const App = () => {
 
-  const SKILL_THRESHOLD = 0.4;
+  const SKILL_THRESHOLD = 0.6;
   const PlayerAmount = playersList.length;
   const [playerTeamOne, setTeamOnePlayers] = useState([]);
   const [playerTeamTwo, setTeamTwoPlayers] = useState([]);
@@ -37,9 +37,9 @@ const App = () => {
       if(CheckPlayersOnSameTeam(team1,team2, "Sam", "Oliver"))
         recreateTeams();
       else  {
-        if(CheckPlayersOnSameTeam(team1,team2, "Neil", "Stevey G"))
-          recreateTeams();
-        else
+       // if(CheckPlayersOnSameTeam(team1,team2, "Neil", "Stevey G"))
+       //   recreateTeams();
+       // else
           if(!CheckPlayersOnSameTeam(team1,team2, "Mark","Oliver"))
             recreateTeams();
           else
