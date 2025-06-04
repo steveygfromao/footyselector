@@ -34,13 +34,15 @@ const App = () => {
     // If skills difference is greater than skills threshold, we will roll for teams again
     calculateSkillsDifference(team1, team2)
     .then((result) => {
-      if(CheckPlayersOnSameTeam(team1,team2, "Sam", "Oliver"))
+      if(CheckPlayersOnSameTeam(team1,team2, "Sam", "Dave"))
         recreateTeams();
       else  {
-       // if(CheckPlayersOnSameTeam(team1,team2, "Neil", "Stevey G"))
-       //   recreateTeams();
-       // else
-          if(!CheckPlayersOnSameTeam(team1,team2, "Mark","Oliver"))
+        if(CheckPlayersOnSameTeam(team1,team2, "Dave", "Sam"))
+          recreateTeams();
+         if(CheckPlayersOnSameTeam(team1,team2, "Peter", "Mike"))
+          recreateTeams();
+        else
+          if(!CheckPlayersOnSameTeam(team1,team2, "Stevey G","Greg"))
             recreateTeams();
           else
             if(result > SKILL_THRESHOLD || checkPlayerPosition(team1,"Defence", totalDefenders) || checkPlayerPosition(team2, "Defence", totalDefenders) || checkPlayerPosition(team1,"Striker", totalStrikers) || checkPlayerPosition(team2,"Striker", totalStrikers)) {
