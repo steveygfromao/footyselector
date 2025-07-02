@@ -5,7 +5,7 @@ import playersList  from './models/players'
 
 const App = () => {
 
-  const SKILL_THRESHOLD = 1;
+  const SKILL_THRESHOLD = 0.4;
   const PlayerAmount = playersList.length;
   const [playerTeamOne, setTeamOnePlayers] = useState([]);
   const [playerTeamTwo, setTeamTwoPlayers] = useState([]);
@@ -34,7 +34,7 @@ const App = () => {
     // If skills difference is greater than skills threshold, we will roll for teams again
     calculateSkillsDifference(team1, team2)
     .then((result) => {
-      if(CheckPlayersOnSameTeam(team1,team2, "Aaron", "Dave"))
+      if(CheckPlayersOnSameTeam(team1,team2, "Sam", "Dave"))
         recreateTeams();
       else  {
         if(CheckPlayersOnSameTeam(team1,team2, "Stevey G", "Neil"))
