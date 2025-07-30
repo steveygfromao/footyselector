@@ -5,7 +5,7 @@ import playersList  from './models/players'
 
 const App = () => {
 
-  const SKILL_THRESHOLD = 0.4;
+  const SKILL_THRESHOLD = 0.8;
   const PlayerAmount = playersList.length;
   const [playerTeamOne, setTeamOnePlayers] = useState([]);
   const [playerTeamTwo, setTeamTwoPlayers] = useState([]);
@@ -34,19 +34,20 @@ const App = () => {
     // If skills difference is greater than skills threshold, we will roll for teams again
     calculateSkillsDifference(team1, team2)
     .then((result) => {
-      if(CheckPlayersOnSameTeam(team1,team2, "Tony", "Aaron"))
+      if(CheckPlayersOnSameTeam(team1,team2, "Oliver", "Aaron"))
         recreateTeams();
       else  {
-        if(CheckPlayersOnSameTeam(team1,team2, "Stevey G", "Neil"))
+        if(!CheckPlayersOnSameTeam(team1,team2, "Mark", "Oliver"))
           recreateTeams();
-         if(!CheckPlayersOnSameTeam(team1,team2, "Tony", "Stevey G"))
-          recreateTeams();
+      //  else
+        // if(!CheckPlayersOnSameTeam(team1,team2, "Tony", "Stevey G"))
+          //recreateTeams();
         else
-       //   if(!CheckPlayersOnSameTeam(team1,team2, "Stevey G","Greg"))
-         //   recreateTeams();
-          //else
-            if(CheckPlayersOnSameTeam(team1,team2, "Neil","Geoff"))
-              recreateTeams();
+          if(!CheckPlayersOnSameTeam(team1,team2, "Stevey G","Geoff"))
+            recreateTeams();
+       //   else
+         //   if(CheckPlayersOnSameTeam(team1,team2, "Neil","Geoff"))
+           //   recreateTeams();
             else
              if(result > SKILL_THRESHOLD || checkPlayerPosition(team1,"Defence", totalDefenders) || checkPlayerPosition(team2, "Defence", totalDefenders) || checkPlayerPosition(team1,"Striker", totalStrikers) || checkPlayerPosition(team2,"Striker", totalStrikers)) {
                recreateTeams();
