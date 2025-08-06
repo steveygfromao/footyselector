@@ -5,7 +5,7 @@ import playersList  from './models/players'
 
 const App = () => {
 
-  const SKILL_THRESHOLD = 0.8;
+  const SKILL_THRESHOLD = 1.4;
   const PlayerAmount = playersList.length;
   const [playerTeamOne, setTeamOnePlayers] = useState([]);
   const [playerTeamTwo, setTeamTwoPlayers] = useState([]);
@@ -19,7 +19,7 @@ const App = () => {
   
   const createTeams = async (players) => {
     for (let i = players.length - 1; i >= 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
+        const j = rand(0,players.length-1);//  Math.floor(Math.random() * (i + 1));
         [players[i], players[j]] = [players[j], players[i]];
     }
    
@@ -43,12 +43,15 @@ const App = () => {
         // if(!CheckPlayersOnSameTeam(team1,team2, "Tony", "Stevey G"))
           //recreateTeams();
         else
-          if(!CheckPlayersOnSameTeam(team1,team2, "Stevey G","Geoff"))
+          if(!CheckPlayersOnSameTeam(team1,team2, "Stevey G","Tony"))
             recreateTeams();
-       //   else
-         //   if(CheckPlayersOnSameTeam(team1,team2, "Neil","Geoff"))
-           //   recreateTeams();
-            else
+          else
+       //     if(!CheckPlayersOnSameTeam(team1,team2, "Stevey G","Greg"))
+         //     recreateTeams();
+           //  else
+           // if(CheckPlayersOnSameTeam(team1,team2, "Lee","Dave"))
+             // recreateTeams();
+            //else
              if(result > SKILL_THRESHOLD || checkPlayerPosition(team1,"Defence", totalDefenders) || checkPlayerPosition(team2, "Defence", totalDefenders) || checkPlayerPosition(team1,"Striker", totalStrikers) || checkPlayerPosition(team2,"Striker", totalStrikers)) {
                recreateTeams();
         }
@@ -63,6 +66,10 @@ const App = () => {
       console.error('Error:',error);
     })
   
+  }
+
+  const rand = (a, b) => {
+    return a+(b-a+1)*crypto.getRandomValues(new Uint32Array(1))[0]/2**32|0
   }
 
   const calculateSkillsDifference = async (teamOne, teamTwo) => {
